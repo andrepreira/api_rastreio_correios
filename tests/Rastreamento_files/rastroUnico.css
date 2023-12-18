@@ -1,0 +1,327 @@
+
+.cabecalho-rastro {
+    display: flex;
+    padding-bottom: 0px;
+    /*height: 90px;*/
+    justify-content: left;
+    
+}
+
+.cabecalho-content {
+    margin-left: 30px;
+    padding-bottom: 20px;
+    /*padding-top: 7px;*/
+}
+
+
+.cabecalho-rastro p {
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1pt;
+}
+
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ship-steps .step {
+    display: flex;
+    padding-bottom: 0px;
+    /*height: 90px;*/
+}
+
+.step-content {
+    margin-left: 30px;
+	padding-bottom: 20px;
+}
+
+.text {
+    width: 100%;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.text-head {
+    font-size: 0.80rem;
+    font-weight: bold;
+    /*color: #878787; cinza escuro
+    color: #120a8f;*/
+	color: #00416b; /*azul correios*/
+}
+
+.text-content {
+    font-size: 0.75rem;
+    font-weight: normal;
+    /*color: #6d6d6d;*/
+	color: #222;
+}
+
+.arrow-current {
+    height: auto; /*72px;*//*Altura da linha*/
+    border-right: 2.5px solid #ffc40c;/* Adiciona borda esquerda na div como ser fosse uma linha.*/
+    width: 21px;
+}
+
+.arrow-none {
+    height: auto;/*Altura da linha*/
+    width: 21px;
+}
+
+.arrow-dashed {
+    height: 82px; /*72px;*//*Altura da linha*/
+    /*border-right: 2.0px dashed #ffc40c;*//* Adiciona borda esquerda na div como ser fosse uma linha.*/
+    border-right: 1.5px dashed #878787;
+    width: 21px;
+}
+
+
+.step-img {
+	height: 40px;
+	width: 40px;
+}
+
+.step-img-icone {
+    background-color: #ddd;
+    border-radius: 100%;
+    object-fit: scale-down;
+    height: 40px;
+    width: 40px;
+}
+
+.circle {
+    background-color: #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.circle .circle-img {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 5px;
+    background-color: #ddd;
+}
+
+.circle-p {
+    background-color: #878787;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    left: 5px;
+}
+
+.bola {
+    height: 2vh;
+    width: 2vh;
+    box-sizing: border-box;
+    border: 0.3vh solid;
+    border-radius: 50%;
+    position: relative;
+    left: 1.1vh;
+    background-color: white;
+}
+
+.bola3 {
+    border-radius: 50%;
+    /*transform: translate(48%, 46%);*/
+    width: 1vh;
+    height: 1vh;
+    left: 0.2vh;
+    top: 0.2vh;
+    position: relative;
+    background-color: blue;
+}
+
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*font-family: 'Trebuchet MS', 'arial', 'helvetica', 'Open Sans', sans-serif;*/
+    letter-spacing: -0.4pt;
+    word-spacing: 0.8pt;
+    line-height: 1.4;
+    padding-bottom: 0.1rem;
+}
+
+.btn-ver-mais {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 15px;
+}
+
+.btn-rastro {
+    height: 20%;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+@media all and (max-width: 320px) {
+
+	.text-head {
+		font-size: 0.70rem;
+	}
+
+	.text-content {
+		font-size: 0.65rem;
+	}
+	
+	.step-img {
+		height: 35px;
+		width: 35px;
+	}
+	
+	.arrow-current {
+		width: 18px;
+	}
+
+	.arrow-none {
+		width: 18px;
+	}
+
+	.arrow-dashed {
+		width: 18px;
+	}
+	
+	.step-content {
+		margin-left: 23px;
+    }
+    
+    .step-img-icone {
+        height: 35px;
+        width: 35px;
+    }
+
+    .circle {
+        width: 35px;
+        height: 35px;
+    }
+
+    .circle .circle-img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .btn-ver-mais {
+        margin-left: 10px;
+    }
+
+}
+
+@media all and (min-width: 768px) {
+    .btn-rastro {
+        width: 30%;
+        margin-bottom: 0px;
+        margin-right: 5px;
+    }
+}
+
+
+/*tooltip do botão ver mais*/
+
+.btn-ver-mais a .title
+{
+    position: absolute;
+    /*left: 173px;*/
+    display: block;
+    background: #ffd400;
+    width: auto;
+    padding: 5px 15px;
+    transform: translateY(-220%) translateX(0px);
+    border-radius: 4px;
+    /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);*/
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    color: #52473b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+}
+
+.btn-ver-mais a:hover .title
+{
+    transform: translateY(-220%) translateX(7px);
+    visibility: visible;
+    opacity: 1;
+}
+
+.btn-ver-mais a .title::before
+{
+    content: '';
+    position: absolute;
+    /*top: 48%;*/
+    top: 90%;
+    /*left: -8px;*/
+    left: 2px;
+    /*width: 12px;
+    height: 12px;*/
+    /*background: red;*/ /*#ffd400;*/
+    transform: rotate(45deg) translateY(-50%);
+    border-radius: 2px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right:10px solid #ffd400;
+}
+
+
+
+/*tooltip contraste*/
+.btn-ver-mais a .title-c
+{
+    position: absolute;
+    display: block;
+    background: #000;
+    width: auto;
+    padding: 5px 15px;
+    transform: translateY(-220%) translateX(0px);
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+    border: 1px solid #fff;
+}
+
+.btn-ver-mais a:hover .title-c
+{
+    transform: translateY(-220%) translateX(7px);
+    visibility: visible;
+    opacity: 1;
+}
+
+.btn-ver-mais a .title-c::after
+{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0.4rem;
+    transform: rotate(45deg) translateY(-50%);
+    border-radius: 2px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right:10px solid #000;
+}
+
+.btn-ver-mais a .title-c::before
+{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 2px;
+    transform: rotate(45deg) translateY(-50%);
+    border-radius: 2px;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-right:13px solid #fff;
+}
